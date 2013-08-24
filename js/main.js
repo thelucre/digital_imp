@@ -1,5 +1,6 @@
 var pjs;
-var current = 1;
+var current = 0;
+var reset = true;
 
 $(document).ready( function() {
 
@@ -16,7 +17,7 @@ $(document).ready( function() {
 
   bindJavascript();
 
-	for(var i = 1; i <= 3; i++) {
+	for(var i = 0; i <= 5; i++) {
 		var img = document.createElement('img');
 		img.src = 'img/test' + i + '.jpg';
 		img.className = 'thumbnail';
@@ -28,12 +29,21 @@ $(document).ready( function() {
 
 	$('.thumbnail').on('click', function(e) {
 		var thumbId = e.currentTarget.id;
-		var updateThumb = thumbId - 1;
+		var updateThumb = thumbId;
 		pjs.reset( updateThumb );
+		$('#click-display').fadeIn();
+		reset = true;
 		if(current != thumbId)
 			$('#' + current).animate({ opacity: 0.5 });
 		current = thumbId;
 		$('#' + current).animate({ opacity: 1 });
+	});
+
+	$('#digimp').on('click', function() {
+		if(reset) {
+			$('#click-display').fadeOut();
+			reset = false;
+		}
 	});
 
 	$(".thumbnail").css({ opacity: 0.5 }).hover(function() {

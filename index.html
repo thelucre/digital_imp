@@ -21,6 +21,10 @@
 			  outline: none;
 			  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
 			}
+			#digimp {
+				border:1px solid #222;
+				cursor: pointer;
+			}
 			.thumbnail {
 				margin:0 10px 5px 0;
 				padding:0;
@@ -32,6 +36,25 @@
 			}
 			.thumbnail:hover {
 				cursor: pointer;
+			}
+			#canv-wrap {
+				position:absolute; 
+				right:0px; 
+				top:0px; 
+				width:612px; 
+				height:612px;
+			}
+			#click-display {
+				position:absolute; 
+				right:0px; 
+				top:0px; 
+				width:602px; 
+				height:602px;
+				border:5px solid #333;
+				text-align: center;
+			}
+			#click-display img {
+				margin:280px auto 0 auto;
 			}
 		</style>
 		<!--[if lt IE 9]>
@@ -46,8 +69,9 @@
 
 	<body unselectable="on">
 		<div id="content" style="width:1050px; position:relative; margin:0 auto;">
-			<div id="thumbnails" style="width:420px; border:1px solid #f00;"></div> 
-			<div style="position:absolute; right:0px; top:0px; width:612px; height:612px; border:1px solid #666;">
+			<div id="thumbnails" style="width:420px;"></div>
+			<div id="click-display"><img src="img/click_here.png"/></div>	 
+			<div id="canv-wrap">
 				<canvas id="digimp" data-processing-sources="pixel.pde" 
 						width="612" height="612">
 					<p>Your browser does not support the canvas tag.</p>
@@ -55,7 +79,8 @@
 				<noscript>
 					<p>JavaScript is required to view the contents of this page.</p>
 				</noscript>
-	    	</div>
+	    </div>
+	    
 		</div>
 	</body>
 

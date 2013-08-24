@@ -31,7 +31,7 @@ void setup() {
   size( 612, 612 );
   reset( 0 );
   
-  for( int i = 1; i <= 3; i++) {
+  for( int i = 0; i <= 5; i++) {
     PImage p = loadImage("img/test" + i + ".jpg");
     images.add(p);
   }
@@ -47,7 +47,7 @@ void draw() {
 void reset( int imageNumber ) {
   drawn = new boolean[612][612];
   current = imageNumber;
-  background(255);  // white
+  background(255, 0);  // white
   drawers.clear();
 }
 
