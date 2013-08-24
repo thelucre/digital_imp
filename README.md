@@ -1,4 +1,6 @@
-digital_imp
+Digital Impressionism
 ===========
 
-Digital Impressionism, Processing drawing demo
+*Processing drawing demo*
+
+Details to come.
