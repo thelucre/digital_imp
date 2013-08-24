@@ -32,7 +32,7 @@ void setup() {
   reset( 0 );
   
   for( int i = 1; i <= 3; i++) {
-    PImage p = loadImage("test" + i + ".jpg");
+    PImage p = loadImage("img/test" + i + ".jpg");
     images.add(p);
   }
 }
