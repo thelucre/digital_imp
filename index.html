@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>the lucre - digital impressionism</title>
+		<script src="jquery.js"></script>
+		<script src="main.js"></script>
+
+		<style type="text/css">
+			body {
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				-o-user-select: none;
+				user-select: none;
+				margin:0px; 
+				padding:0px;
+			}
+			canvas {
+			  outline: none;
+			  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
+			}
+			.thumbnail {
+				margin:0 10px 5px 0;
+				padding:0;
+				width:197px;
+				height:197px;
+				display: inline-block;
+				zoom: 0;
+				position:relative;
+			}
+			.thumbnail:hover {
+				cursor: pointer;
+			}
+		</style>
+		<!--[if lt IE 9]>
+			<script type="text/javascript">alert("Your browser does not support the canvas tag.");</script>
+		<![endif]-->
+		<script src="processing.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		// convenience function to get the id attribute of generated sketch html element
+		function getProcessingSketchId () { return 'digimp'; }
+		</script>
+	</head>
+
+	<body unselectable="on">
+		<div id="content" style="width:1050px; position:relative; margin:0 auto;">
+			<div id="thumbnails" style="width:420px; border:1px solid #f00;"></div> 
+			<div style="position:absolute; right:0px; top:0px; width:612px; height:612px; border:1px solid #666;">
+				<canvas id="digimp" data-processing-sources="pixel.pde" 
+						width="612" height="612">
+					<p>Your browser does not support the canvas tag.</p>
+				</canvas>
+				<noscript>
+					<p>JavaScript is required to view the contents of this page.</p>
+				</noscript>
+	    	</div>
+		</div>
+	</body>
+
+</html>
