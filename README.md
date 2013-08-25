@@ -3,4 +3,4 @@ Digital Impressionism
 
 *Processing drawing demo*
 
-Details to come.
+[http://thelucre.com/digital-impressionism/](http://thelucre.com/digital-impressionism/)
